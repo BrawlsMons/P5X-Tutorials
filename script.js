@@ -11,9 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mobile menu toggle (if needed for future mobile optimization)
     const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
 
-    if (navToggle) {
+    if (navToggle && navMenu) {
         navToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
         });
@@ -90,9 +89,90 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Update timer every second if timer elements exist
+    // Daily reset timer
+    function updateDailyTimer() {
+        const now = new Date();
+        
+        // Convert to JST (UTC+9)
+        const jstOffset = 9 * 60 * 60 * 1000;
+        const nowUTC = now.getTime() + (now.getTimezoneOffset() * 60 * 1000);
+        const nowJST = new Date(nowUTC + jstOffset);
+        
+        // Get next 5:00 AM JST
+        const nextReset = new Date(nowJST);
+        nextReset.setHours(5, 0, 0, 0);
+        
+        // If it's already past 5:00 AM today, get tomorrow's reset
+        if (nowJST.getHours() >= 5) {
+            nextReset.setDate(nextReset.getDate() + 1);
+        }
+        
+        // Calculate time difference
+        const timeDiff = nextReset.getTime() - nowJST.getTime();
+        
+        if (timeDiff > 0) {
+            const hours = Math.floor(timeDiff / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+            
+            // Update daily timer display
+            const dailyHoursEl = document.getElementById('daily-hours');
+            const dailyMinutesEl = document.getElementById('daily-minutes');
+            const dailySecondsEl = document.getElementById('daily-seconds');
+            
+            if (dailyHoursEl) dailyHoursEl.textContent = hours.toString().padStart(2, '0');
+            if (dailyMinutesEl) dailyMinutesEl.textContent = minutes.toString().padStart(2, '0');
+            if (dailySecondsEl) dailySecondsEl.textContent = seconds.toString().padStart(2, '0');
+        }
+    }
+
+    // Update timers every second if timer elements exist
     if (document.getElementById('days')) {
         updateTimer();
         setInterval(updateTimer, 1000);
+    }
+    
+    if (document.getElementById('daily-hours')) {
+        updateDailyTimer();
+        setInterval(updateDailyTimer, 1000);
+    }
+
+    // Mobile hamburger menu functionality
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Handle dropdown clicks on mobile
+        dropdowns.forEach(dropdown => {
+            const dropdownToggle = dropdown.querySelector('.nav-link');
+            dropdownToggle.addEventListener('click', function(e) {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
     }
 });

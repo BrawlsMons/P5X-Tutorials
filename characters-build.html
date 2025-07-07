@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Builds - Persona 5 The Phantom X Guide</title>
+    <meta name="description" content="Complete character builds and stats tree for Persona 5 The Phantom X. Optimize your team with the best builds for Joker, Panther, Skull, Mona, and more P5X characters.">
+    <link rel="icon" type="image/x-icon" href="assets/icon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP8WHLYHMK"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YP8WHLYHMK');
+    </script>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html" class="logo-text">p5x.space</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="answers.html" class="nav-link">Answers</a></li>
+                    <li><a href="guides.html" class="nav-link">Guides</a></li>
+                    <li><a href="reset-times.html" class="nav-link">Daily/Weekly Reset</a></li>
+
+                    <li><a href="characters.html" class="nav-link">Characters</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="content-section">
+            <h1>Character Builds - Persona 5 The Phantom X</h1>
+            <p style="text-align: center; color: #cccccc; margin-bottom: 2rem;">
+                Optimize your team with the best character builds and stats tree. Choose a character to view their recommended build and skill progression.
+            </p>
+
+            <!-- Character Selection -->
+            <div class="character-selector">
+                <h2>Select a Character</h2>
+                <div class="character-buttons">
+                    <button class="character-btn active" data-character="joker">
+                        <span class="character-name">Joker</span>
+                        <span class="character-role">Strategist</span>
+                    </button>
+                    <button class="character-btn" data-character="panther">
+                        <span class="character-name">Panther</span>
+                        <span class="character-role">Sweeper</span>
+                    </button>
+                    <button class="character-btn" data-character="skull">
+                        <span class="character-name">Skull</span>
+                        <span class="character-role">Assassin</span>
+                    </button>
+                    <button class="character-btn" data-character="mona">
+                        <span class="character-name">Mona</span>
+                        <span class="character-role">Medic</span>
+                    </button>
+                    <button class="character-btn" data-character="kotone">
+                        <span class="character-name">Kotone</span>
+                        <span class="character-role">Assassin</span>
+                    </button>
+                    <button class="character-btn" data-character="leon">
+                        <span class="character-name">Leon</span>
+                        <span class="character-role">Strategist</span>
+                    </button>
+                    <button class="character-btn" data-character="rin">
+                        <span class="character-name">Rin</span>
+                        <span class="character-role">Saboteur</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Build Display -->
+            <div class="build-display">
+                <div class="build-tabs">
+                    <button class="tab-btn active" data-tab="build">Build</button>
+                    <button class="tab-btn" data-tab="tree">Stats Tree</button>
+                </div>
+
+                <div class="build-content">
+                    <!-- Build Tab -->
+                    <div class="tab-content active" id="build-tab">
+                        <div class="build-image-container">
+                            <img id="build-image" src="assets/builds/Joker_Build.png" alt="Character Build" class="build-image">
+                        </div>
+                        <div class="build-info">
+                            <h3 id="build-title">Joker - Strategist Build</h3>
+                            <p id="build-description">Dark magic specialist with strategic abilities and versatile curse-based attacks.</p>
+                            <div class="build-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Role:</span>
+                                    <span class="stat-value" id="character-role-display">Strategist</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Element:</span>
+                                    <span class="stat-value" id="character-element">Curse</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Rarity:</span>
+                                    <span class="stat-value" id="character-rarity">★★★★★</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tree Tab -->
+                    <div class="tab-content" id="tree-tab">
+                        <div class="tree-image-container">
+                            <img id="tree-image" src="assets/builds/Joker_Tree.png" alt="Stats Tree" class="tree-image">
+                        </div>
+                        <div class="tree-info">
+                            <h3>Stats Tree</h3>
+                            <p>You need to know what is good and bad for your character's development.</p>
+                            <div class="tree-tips">
+                                <h4>Tips:</h4>
+                                <ul id="skill-tips">
+                                    <li>Focus on core abilities first</li>
+                                    <li>Prioritize skills that synergize with your team</li>
+                                    <li>Consider your playstyle when choosing optional skills</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>p5x.space</h3>
+                <p>Your complete guide to Persona 5 The Phantom X</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="classroom-answers.html">Classroom Answers</a></li>
+                    <li><a href="reset-times.html">Reset Times</a></li>
+
+                    <li><a href="romance-guide.html">Romance Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Created by</h4>
+                <p><strong>BrawlsMons</strong></p>
+                <p>Unofficial fan-made guide</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 p5x.space by BrawlsMons. Unofficial game guide for Persona 5 The Phantom X.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Character Build Data
+        const characterData = {
+            joker: {
+                name: "Joker",
+                codename: "Ren Amamiya",
+                role: "Strategist",
+                element: "Curse",
+                rarity: "★★★★★",
+                description: "Dark magic specialist with strategic abilities and versatile curse-based attacks. Expert at exploiting enemy weaknesses.",
+                tips: [
+                    "Focus on curse magic skills for maximum damage",
+                    "Use strategic abilities to support your team",
+                    "Exploit elemental weaknesses when possible",
+                    "Balance offense with team coordination"
+                ]
+            },
+            panther: {
+                name: "Panther",
+                codename: "Ann Takamaki",
+                role: "Sweeper",
+                element: "Fire",
+                rarity: "★★★★★",
+                description: "High-damage fire specialist focused on devastating AoE attacks and elemental weakness exploitation.",
+                tips: [
+                    "Prioritize fire damage skills for massive DPS",
+                    "Focus on AoE abilities for crowd control",
+                    "Target enemies weak to fire damage",
+                    "Combine with other sweepers for chain attacks"
+                ]
+            },
+            skull: {
+                name: "Skull",
+                codename: "Ryuji Sakamoto",
+                role: "Assassin",
+                element: "Gun",
+                rarity: "★★★★★",
+                description: "Physical gun-based assassin specializing in high-damage single-target eliminations.",
+                tips: [
+                    "Focus on gun-based physical attacks",
+                    "Prioritize single-target elimination skills",
+                    "Build around critical hit damage",
+                    "Use positioning for optimal damage output"
+                ]
+            },
+            mona: {
+                name: "Mona",
+                codename: "Morgana",
+                role: "Medic",
+                element: "Wind",
+                rarity: "★★★★★",
+                description: "Wind-based medic with healing abilities and support magic, essential for team sustainability.",
+                tips: [
+                    "Prioritize healing and recovery skills",
+                    "Use wind magic for elemental coverage",
+                    "Focus on team support and buffs",
+                    "Master timing for crucial heals"
+                ]
+            },
+            kotone: {
+                name: "Kotone",
+                codename: "Kotone Montagne",
+                role: "Assassin",
+                element: "Ice",
+                rarity: "★★★★",
+                description: "Ice-based assassin with precise attacks and freezing capabilities for crowd control.",
+                tips: [
+                    "Focus on ice damage and freeze effects",
+                    "Use precision strikes for maximum impact",
+                    "Combine ice attacks with team combos",
+                    "Master crowd control timing"
+                ]
+            },
+            leon: {
+                name: "Leon",
+                codename: "Leo Kamiyama",
+                role: "Strategist",
+                element: "Nuclear",
+                rarity: "★★★★",
+                description: "Nuclear element strategist with devastating area attacks and tactical team support.",
+                tips: [
+                    "Utilize nuclear attacks for AoE damage",
+                    "Focus on strategic positioning",
+                    "Coordinate with team for maximum impact",
+                    "Master tactical timing for nuclear strikes"
+                ]
+            },
+            rin: {
+                name: "Rin",
+                codename: "Yaoling Li",
+                role: "Saboteur",
+                element: "Curse",
+                rarity: "★★★★★",
+                description: "Curse-based saboteur specializing in debuffs, status effects, and enemy disruption.",
+                tips: [
+                    "Focus on debuff and sabotage skills",
+                    "Use curse magic for status effects",
+                    "Disrupt enemy formations and strategies",
+                    "Support team with enemy weakening"
+                ]
+            }
+        };
+
+        // Character Build System
+        document.addEventListener('DOMContentLoaded', function() {
+            const characterBtns = document.querySelectorAll('.character-btn');
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const buildImage = document.getElementById('build-image');
+            const treeImage = document.getElementById('tree-image');
+            const buildTitle = document.getElementById('build-title');
+            const buildDescription = document.getElementById('build-description');
+            const characterRoleDisplay = document.getElementById('character-role-display');
+            const characterElement = document.getElementById('character-element');
+            const characterRarity = document.getElementById('character-rarity');
+            const skillTips = document.getElementById('skill-tips');
+
+            let currentCharacter = 'joker';
+            let currentTab = 'build';
+
+            // Character selection
+            characterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    characterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    currentCharacter = this.dataset.character;
+                    updateCharacterDisplay();
+                });
+            });
+
+            // Tab switching
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    currentTab = this.dataset.tab;
+                    updateTabDisplay();
+                });
+            });
+
+            function updateCharacterDisplay() {
+                const char = characterData[currentCharacter];
+                buildTitle.textContent = `${char.name} - ${char.role} Build`;
+                buildDescription.textContent = char.description;
+                characterRoleDisplay.textContent = char.role;
+                characterElement.textContent = char.element;
+                characterRarity.textContent = char.rarity;
+                
+                // Update tips
+                skillTips.innerHTML = char.tips.map(tip => `<li>${tip}</li>`).join('');
+                
+                // Update images
+                buildImage.src = `assets/builds/${char.name}_Build.png`;
+                treeImage.src = `assets/builds/${char.name}_Tree.png`;
+                buildImage.alt = `${char.name} Build`;
+                treeImage.alt = `${char.name} Stats Tree`;
+            }
+
+            function updateTabDisplay() {
+                const tabContents = document.querySelectorAll('.tab-content');
+                tabContents.forEach(content => content.classList.remove('active'));
+                document.getElementById(`${currentTab}-tab`).classList.add('active');
+            }
+
+            // Initialize
+            updateCharacterDisplay();
+        });
+    </script>
+</body>
+</html>

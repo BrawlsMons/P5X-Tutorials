@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>P5X Reset Times - Daily & Weekly Schedule with Live Countdown</title>
     <meta name="description" content="Complete schedule of daily and weekly reset times in Persona 5 The Phantom X. Live countdown timers for all P5X server resets and daily activities.">
     <link rel="icon" type="image/x-icon" href="assets/icon.ico">
@@ -25,34 +25,19 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="logo">
-                    <div class="logo-text">P5X Tutorials</div>
+                    <a href="index.html" class="logo-text">p5x.space</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="classroom-answers.html" class="nav-link">Classroom Answers</a></li>
+                    <li><a href="answers.html" class="nav-link">Answers</a></li>
+                    <li><a href="guides.html" class="nav-link">Guides</a></li>
                     <li><a href="reset-times.html" class="nav-link active">Daily/Weekly Reset</a></li>
-                    <li class="dropdown">
-                        <a href="part-time-jobs.html" class="nav-link">Part-Time Jobs</a>
-                        <div class="dropdown-content">
-                            <a href="flower-shop.html">Flower Shop</a>
-                            <a href="shichi-kun.html">Shichi-kun</a>
-                            <a href="convenience-store.html">Convenience Store</a>
-                        </div>
-                    </li>
-                    <li><a href="romance-guide.html" class="nav-link">Romance Guide</a></li>
-                    <li><a href="team-builds.html" class="nav-link">Team Builds</a></li>
-                    <li class="dropdown">
-                        <a href="card-game.html" class="nav-link">Games</a>
-                        <div class="dropdown-content">
-                            <a href="card-game.html">Card Game</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a href="characters.html" class="nav-link">Other</a>
-                        <div class="dropdown-content">
-                            <a href="characters.html">Characters</a>
-                        </div>
-                    </li>
+
+                    <li><a href="characters.html" class="nav-link">Characters</a></li>
                 </ul>
             </div>
         </nav>
@@ -61,6 +46,26 @@
     <main class="main-content">
         <div class="content-section">
             <h1>Daily & Weekly Reset Times - Persona 5 The Phantom X</h1>
+            
+            <h2>Daily Reset Timer</h2>
+            <div class="timer-container">
+                <div class="timer-display">
+                    <div class="timer-section">
+                        <div class="timer-number" id="daily-hours">00</div>
+                        <div class="timer-label">Hours</div>
+                    </div>
+                    <div class="timer-section">
+                        <div class="timer-number" id="daily-minutes">00</div>
+                        <div class="timer-label">Minutes</div>
+                    </div>
+                    <div class="timer-section">
+                        <div class="timer-number" id="daily-seconds">00</div>
+                        <div class="timer-label">Seconds</div>
+                    </div>
+                </div>
+                <p class="timer-subtitle">Time until next daily reset (5:00 AM JST)</p>
+            </div>
+            
             <h2>Weekly Reset Timer</h2>
             <div class="timer-container">
                 <div class="timer-display">
@@ -105,33 +110,33 @@
             <h2>Weekly Reset Times</h2>
             <p>Weekly resets occur every <strong style="color: #ff6b6b;">Sunday</strong> at the following times:</p>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                <div style="background: rgba(255,107,107,0.1); padding: 1rem; border-radius: 10px;">
-                    <h4 style="color: #ff6b6b;">PDT</h4>
+            <div class="timezone-grid">
+                <div class="timezone-card">
+                    <h4>PDT</h4>
                     <p>1:00 PM</p>
                 </div>
-                <div style="background: rgba(255,107,107,0.1); padding: 1rem; border-radius: 10px;">
-                    <h4 style="color: #ff6b6b;">EDT</h4>
+                <div class="timezone-card">
+                    <h4>EDT</h4>
                     <p>4:00 PM</p>
                 </div>
-                <div style="background: rgba(255,107,107,0.1); padding: 1rem; border-radius: 10px;">
-                    <h4 style="color: #ff6b6b;">BRT</h4>
+                <div class="timezone-card">
+                    <h4>BRT</h4>
                     <p>5:00 PM</p>
                 </div>
-                <div style="background: rgba(255,107,107,0.1); padding: 1rem; border-radius: 10px;">
-                    <h4 style="color: #ff6b6b;">BST</h4>
+                <div class="timezone-card">
+                    <h4>BST</h4>
                     <p>9:00 PM</p>
                 </div>
-                <div style="background: rgba(255,107,107,0.1); padding: 1rem; border-radius: 10px;">
-                    <h4 style="color: #ff6b6b;">CEST</h4>
+                <div class="timezone-card">
+                    <h4>CEST</h4>
                     <p>10:00 PM</p>
                 </div>
-                <div style="background: rgba(255,107,107,0.1); padding: 1rem; border-radius: 10px;">
-                    <h4 style="color: #ff6b6b;">JST</h4>
+                <div class="timezone-card">
+                    <h4>JST</h4>
                     <p>5:00 AM (Monday)</p>
                 </div>
-                <div style="background: rgba(255,107,107,0.1); padding: 1rem; border-radius: 10px;">
-                    <h4 style="color: #ff6b6b;">AEST</h4>
+                <div class="timezone-card">
+                    <h4>AEST</h4>
                     <p>6:00 AM (Monday)</p>
                 </div>
             </div>
@@ -161,7 +166,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>P5X Tutorials</h3>
+                <h3>p5x.space</h3>
                 <p>Your complete guide to Persona 5 The Phantom X</p>
             </div>
             <div class="footer-section">
@@ -169,7 +174,7 @@
                 <ul>
                     <li><a href="classroom-answers.html">Classroom Answers</a></li>
                     <li><a href="reset-times.html">Reset Times</a></li>
-                    <li><a href="part-time-jobs.html">Part-Time Jobs</a></li>
+
                     <li><a href="romance-guide.html">Romance Guide</a></li>
                 </ul>
             </div>
@@ -180,7 +185,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 P5X Tutorials by BrawlsMons. Unofficial game guide for Persona 5 The Phantom X.</p>
+            <p>&copy; 2025 p5x.space by BrawlsMons. Unofficial game guide for Persona 5 The Phantom X.</p>
         </div>
     </footer>
 

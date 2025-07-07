@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palace Maps & Collectibles - p5x.space</title>
+    <meta name="description" content="Complete palace maps guide for Persona 5 The Phantom X with all collectible locations. Navigate through Kiuchi and Miyazawa palaces with detailed floor plans.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/icon.ico" type="image/x-icon">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP8WHLYHMK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YP8WHLYHMK');
+    </script>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html" class="logo-text">p5x.space</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="answers.html" class="nav-link">Answers</a></li>
+                    <li><a href="guides.html" class="nav-link">Guides</a></li>
+                    <li><a href="reset-times.html" class="nav-link">Daily/Weekly Reset</a></li>
+                    <li><a href="characters.html" class="nav-link">Characters</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="palace-hero">
+            <div class="palace-hero-content">
+                <h1 class="palace-hero-title">Palace Maps & Collectibles</h1>
+                <p class="palace-hero-subtitle">Navigate the Metaverse with Confidence</p>
+                <div class="palace-hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10</span>
+                        <span class="stat-label">Detailed Maps</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Palace Locations</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Collectibles</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Credit Section -->
+        <section class="credit-banner">
+            <div class="credit-container">
+                <div class="credit-icon">📍</div>
+                <div class="credit-content">
+                    <h3>Maps Source</h3>
+                    <p>All palace maps are courtesy of <a href="https://raiderking.com/" target="_blank" rel="noopener noreferrer">raiderking.com</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Palace Navigation -->
+        <section class="palace-navigation">
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-palace="kiuchi">Kiuchi Palace</button>
+                <button class="nav-tab" data-palace="miyazawa">Miyazawa Palace</button>
+            </div>
+        </section>
+
+        <!-- Kiuchi Palace -->
+        <section class="palace-content" id="kiuchi-palace">
+            <div class="palace-intro">
+                <h2>Kiuchi Palace</h2>
+                <p>Navigate through the modern entertainment complex with these detailed floor maps.</p>
+            </div>
+            
+            <div class="maps-container">
+                <div class="map-item" onclick="openModal('assets/maps/kiuchi/Club-1F-Map.jpg', 'Club 1F - Kiuchi Palace')">
+                    <div class="map-preview">
+                        <img src="assets/maps/kiuchi/Club-1F-Map.jpg" alt="Club 1F Map">
+                        <div class="map-overlay">
+                            <div class="overlay-content">
+                                <i class="zoom-icon">🔍</i>
+                                <span>View Full Map</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-info">
+                        <h3>Club 1F</h3>
+                        <p>Ground floor entrance with initial collectibles and treasure locations</p>
+                        <div class="map-tags">
+                            <span class="tag">Entrance</span>
+                            <span class="tag">Collectibles</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-item" onclick="openModal('assets/maps/kiuchi/Club-2F-Map-2.jpg', 'Club 2F - Kiuchi Palace')">
+                    <div class="map-preview">
+                        <img src="assets/maps/kiuchi/Club-2F-Map-2.jpg" alt="Club 2F Map">
+                        <div class="map-overlay">
+                            <div class="overlay-content">
+                                <i class="zoom-icon">🔍</i>
+                                <span>View Full Map</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-info">
+                        <h3>Club 2F</h3>
+                        <p>Second floor with advanced puzzles and hidden treasures</p>
+                        <div class="map-tags">
+                            <span class="tag">Puzzles</span>
+                            <span class="tag">Hidden Items</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-item" onclick="openModal('assets/maps/kiuchi/Club-3F-Map.jpg', 'Club 3F - Kiuchi Palace')">
+                    <div class="map-preview">
+                        <img src="assets/maps/kiuchi/Club-3F-Map.jpg" alt="Club 3F Map">
+                        <div class="map-overlay">
+                            <div class="overlay-content">
+                                <i class="zoom-icon">🔍</i>
+                                <span>View Full Map</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-info">
+                        <h3>Club 3F</h3>
+                        <p>Top floor with premium collectibles and strategic locations</p>
+                        <div class="map-tags">
+                            <span class="tag">Premium Items</span>
+                            <span class="tag">Strategic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-item" onclick="openModal('assets/maps/kiuchi/Exhibition-Hall-1F-Map.jpg', 'Exhibition Hall 1F - Kiuchi Palace')">
+                    <div class="map-preview">
+                        <img src="assets/maps/kiuchi/Exhibition-Hall-1F-Map.jpg" alt="Exhibition Hall 1F Map">
+                        <div class="map-overlay">
+                            <div class="overlay-content">
+                                <i class="zoom-icon">🔍</i>
+                                <span>View Full Map</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-info">
+                        <h3>Exhibition Hall 1F</h3>
+                        <p>Main exhibition area with display collectibles</p>
+                        <div class="map-tags">
+                            <span class="tag">Exhibition</span>
+                            <span class="tag">Display Items</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-item" onclick="openModal('assets/maps/kiuchi/Exhibition-Hall-2F-Map.jpg', 'Exhibition Hall 2F - Kiuchi Palace')">
+                    <div class="map-preview">
+                        <img src="assets/maps/kiuchi/Exhibition-Hall-2F-Map.jpg" alt="Exhibition Hall 2F Map">
+                        <div class="map-overlay">
+                            <div class="overlay-content">
+                                <i class="zoom-icon">🔍</i>
+                                <span>View Full Map</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-info">
+                        <h3>Exhibition Hall 2F</h3>
+                        <p>Upper gallery with boss access and rare treasures</p>
+                        <div class="map-tags">
+                            <span class="tag">Boss Area</span>
+                            <span class="tag">Rare Items</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Miyazawa Palace -->
+        <section class="palace-content" id="miyazawa-palace" style="display: none;">
+            <div class="palace-intro">
+                <h2>Miyazawa Palace</h2>
+                <p>Explore the ancient castle fortress with comprehensive navigation maps.</p>
+            </div>
+            
+            <div class="maps-container">
+                <div class="map-item" onclick="openModal('assets/maps/miyazawas/Second-Bailey-Map.jpg', 'Second Bailey - Miyazawa Palace')">
+                    <div class="map-preview">
+                        <img src="assets/maps/miyazawas/Second-Bailey-Map.jpg" alt="Second Bailey Map">
+                        <div class="map-overlay">
+                            <div class="overlay-content">
+                                <i class="zoom-icon">🔍</i>
+                                <span>View Full Map</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-info">
+                        <h3>Second Bailey</h3>
+                        <p>Outer castle defenses with guard post treasures</p>
+                        <div class="map-tags">
+                            <span class="tag">Outer Castle</span>
+                            <span class="tag">Guard Posts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-item" onclick="openModal('assets/maps/miyazawas/Third-Bailey-Map.jpg', 'Third Bailey - Miyazawa Palace')">
+                    <div class="map-preview">
+                        <img src="assets/maps/miyazawas/Third-Bailey-Map.jpg" alt="Third Bailey Map">
+                        <div class="map-overlay">
+                            <div class="overlay-content">
+                                <i class="zoom-icon">🔍</i>
+                                <span>View Full Map</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-info">
+                        <h3>Third Bailey</h3>
+                        <p>Inner defenses leading to the castle keep</p>
+                        <div class="map-tags">
+                            <span class="tag">Inner Castle</span>
+                            <span class="tag">Keep Access</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-item" onclick="openModal('assets/maps/miyazawas/Castle-Keep-Depths-Map.jpg', 'Castle Keep Depths - Miyazawa Palace')">
+                    <div class="map-preview">
+                        <img src="assets/maps/miyazawas/Castle-Keep-Depths-Map.jpg" alt="Castle Keep Depths Map">
+                        <div class="map-overlay">
+                            <div class="overlay-content">
+                                <i class="zoom-icon">🔍</i>
+                                <span>View Full Map</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-info">
+                        <h3>Castle Keep Depths</h3>
+                        <p>Underground passages with hidden treasure chambers</p>
+                        <div class="map-tags">
+                            <span class="tag">Underground</span>
+                            <span class="tag">Secret Chambers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-item" onclick="openModal('assets/maps/miyazawas/Castle-Keep-Mid-Level-Map.jpg', 'Castle Keep Mid-Level - Miyazawa Palace')">
+                    <div class="map-preview">
+                        <img src="assets/maps/miyazawas/Castle-Keep-Mid-Level-Map.jpg" alt="Castle Keep Mid-Level Map">
+                        <div class="map-overlay">
+                            <div class="overlay-content">
+                                <i class="zoom-icon">🔍</i>
+                                <span>View Full Map</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-info">
+                        <h3>Castle Keep Mid-Level</h3>
+                        <p>Main castle floors with throne room access</p>
+                        <div class="map-tags">
+                            <span class="tag">Main Castle</span>
+                            <span class="tag">Throne Room</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-item" onclick="openModal('assets/maps/miyazawas/Castle-Keep-Summit-Map.jpg', 'Castle Keep Summit - Miyazawa Palace')">
+                    <div class="map-preview">
+                        <img src="assets/maps/miyazawas/Castle-Keep-Summit-Map.jpg" alt="Castle Keep Summit Map">
+                        <div class="map-overlay">
+                            <div class="overlay-content">
+                                <i class="zoom-icon">🔍</i>
+                                <span>View Full Map</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-info">
+                        <h3>Castle Keep Summit</h3>
+                        <p>Final boss area with ultimate treasure locations</p>
+                        <div class="map-tags">
+                            <span class="tag">Boss Area</span>
+                            <span class="tag">Ultimate Treasure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="tips-section">
+            <h2>Navigation Tips</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">🗺️</div>
+                    <h3>Study the Layout</h3>
+                    <p>Click on any map to view it in full detail. Use zoom and pan to examine collectible locations closely.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">💎</div>
+                    <h3>Collect Everything</h3>
+                    <p>Each map shows precise locations of all collectibles. Don't miss any hidden treasures!</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">⚡</div>
+                    <h3>Plan Your Route</h3>
+                    <p>Optimize your path through each palace area to maximize efficiency and minimize backtracking.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🎯</div>
+                    <h3>Mark Your Progress</h3>
+                    <p>Keep track of which areas you've fully explored to ensure 100% completion.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-backdrop" onclick="closeModal()"></div>
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div class="modal-header">
+                <h3 id="modalTitle"></h3>
+                <p>Use mouse wheel to zoom • Drag to pan • ESC to close</p>
+            </div>
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="" class="modal-image">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>p5x.space</h3>
+                <p>Your complete guide to Persona 5 The Phantom X</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="classroom-answers.html">Classroom Answers</a></li>
+                    <li><a href="reset-times.html">Reset Times</a></li>
+                    <li><a href="romance-guide.html">Romance Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Created by</h4>
+                <p><strong>BrawlsMons</strong></p>
+                <p>Unofficial fan-made guide</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 p5x.space by BrawlsMons. Unofficial game guide for Persona 5 The Phantom X.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Palace tab switching
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const palace = this.getAttribute('data-palace');
+                
+                // Update active tab
+                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Show/hide palace content
+                document.querySelectorAll('.palace-content').forEach(content => {
+                    content.style.display = 'none';
+                });
+                document.getElementById(palace + '-palace').style.display = 'block';
+            });
+        });
+
+        // Modal functionality
+        let currentScale = 1;
+        let currentX = 0;
+        let currentY = 0;
+        let isDragging = false;
+        let dragStart = { x: 0, y: 0 };
+
+        function openModal(imageSrc, title) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            modal.style.display = 'flex';
+            modalImage.src = imageSrc;
+            modalTitle.textContent = title;
+            
+            // Reset transformations
+            currentScale = 1;
+            currentX = 0;
+            currentY = 0;
+            updateTransform();
+            
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function updateTransform() {
+            const modalImage = document.getElementById('modalImage');
+            modalImage.style.transform = `translate(${currentX}px, ${currentY}px) scale(${currentScale})`;
+        }
+
+        // Modal event listeners
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Zoom functionality
+        document.getElementById('modalImage').addEventListener('wheel', function(e) {
+            e.preventDefault();
+            
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const delta = e.deltaY > 0 ? 0.9 : 1.1;
+            const newScale = currentScale * delta;
+            
+            if (newScale >= 0.5 && newScale <= 5) {
+                currentScale = newScale;
+                currentX = x - (x - currentX) * delta;
+                currentY = y - (y - currentY) * delta;
+                updateTransform();
+            }
+        });
+
+        // Drag functionality
+        document.getElementById('modalImage').addEventListener('mousedown', function(e) {
+            isDragging = true;
+            dragStart.x = e.clientX - currentX;
+            dragStart.y = e.clientY - currentY;
+            this.style.cursor = 'grabbing';
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            if (isDragging) {
+                currentX = e.clientX - dragStart.x;
+                currentY = e.clientY - dragStart.y;
+                updateTransform();
+            }
+        });
+
+        document.addEventListener('mouseup', function() {
+            isDragging = false;
+            document.getElementById('modalImage').style.cursor = 'grab';
+        });
+
+        // Touch support
+        let lastTouchDistance = 0;
+        let touchStartX = 0;
+        let touchStartY = 0;
+
+        document.getElementById('modalImage').addEventListener('touchstart', function(e) {
+            if (e.touches.length === 1) {
+                touchStartX = e.touches[0].clientX - currentX;
+                touchStartY = e.touches[0].clientY - currentY;
+                isDragging = true;
+            } else if (e.touches.length === 2) {
+                lastTouchDistance = Math.sqrt(
+                    Math.pow(e.touches[0].clientX - e.touches[1].clientX, 2) +
+                    Math.pow(e.touches[0].clientY - e.touches[1].clientY, 2)
+                );
+            }
+        });
+
+        document.getElementById('modalImage').addEventListener('touchmove', function(e) {
+            e.preventDefault();
+            if (e.touches.length === 1 && isDragging) {
+                currentX = e.touches[0].clientX - touchStartX;
+                currentY = e.touches[0].clientY - touchStartY;
+                updateTransform();
+            } else if (e.touches.length === 2) {
+                const touchDistance = Math.sqrt(
+                    Math.pow(e.touches[0].clientX - e.touches[1].clientX, 2) +
+                    Math.pow(e.touches[0].clientY - e.touches[1].clientY, 2)
+                );
+                
+                if (lastTouchDistance > 0) {
+                    const scaleChange = touchDistance / lastTouchDistance;
+                    const newScale = currentScale * scaleChange;
+                    
+                    if (newScale >= 0.5 && newScale <= 5) {
+                        currentScale = newScale;
+                        updateTransform();
+                    }
+                }
+                lastTouchDistance = touchDistance;
+            }
+        });
+
+        document.getElementById('modalImage').addEventListener('touchend', function() {
+            isDragging = false;
+            lastTouchDistance = 0;
+        });
+    </script>
+</body>
+</html>
