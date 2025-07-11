@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Chat - Persona 5 The Phantom X Guide</title>
+    <meta name="description" content="Join the P5X community chat for real-time discussions about Persona 5 The Phantom X strategies and tips.">
+    <link rel="icon" type="image/x-icon" href="assets/icon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP8WHLYHMK"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP8WHLYHMK');
+    </script>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html" class="logo-text">p5x.space</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="answers.html" class="nav-link">Answers</a></li>
+                    <li><a href="guides.html" class="nav-link">Guides</a></li>
+                    <li><a href="reset-times.html" class="nav-link">Daily/Weekly Reset</a></li>
+                    <li><a href="characters.html" class="nav-link">Characters</a></li>
+                    <li><a href="forum.html" class="nav-link">Forum</a></li>
+                    <li><a href="chat.html" class="nav-link">Chat</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h1>Community Chat</h1>
+            <p>Real-time discussions with fellow Phantom Thieves</p>
+        </div>
+
+        <!-- User Setup Section -->
+        <div class="user-setup" id="userSetup" style="display: none;">
+            <div class="card">
+                <h2>Join the Chat!</h2>
+                <p>Please enter your username to start chatting:</p>
+                <div class="input-group">
+                    <input type="text" id="usernameInput" placeholder="Enter your username" maxlength="20">
+                    <button id="setUsernameBtn" class="btn-primary">Join Chat</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Interface -->
+        <div class="chat-container" id="chatContainer" style="display: none;">
+            <div class="chat-sidebar">
+                <div class="chat-info">
+                    <div class="user-info">
+                        <strong id="currentUsername"></strong>
+                        <button id="changeUsernameBtn" class="btn-secondary">Change</button>
+                    </div>
+                    <div class="online-users">
+                        <h3>Online Users</h3>
+                        <div id="onlineUsersList">
+                            <!-- Online users will be displayed here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-controls">
+                    <button id="clearChatBtn" class="btn-secondary">Clear Chat</button>
+                    <div class="chat-settings">
+                        <label>
+                            <input type="checkbox" id="soundEnabled" checked>
+                            Sound notifications
+                        </label>
+                        <label>
+                            <input type="checkbox" id="timestampsEnabled" checked>
+                            Show timestamps
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-main">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will be dynamically loaded here -->
+                </div>
+
+                <div class="chat-input-container">
+                    <div class="chat-input-area">
+                        <input type="text" id="messageInput" placeholder="Type your message..." maxlength="500">
+                        <button id="sendMessageBtn" class="btn-primary">Send</button>
+                    </div>
+                    <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                        Someone is typing...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Instructions -->
+        <div class="chat-instructions">
+            <div class="card">
+                <h3>Chat Guidelines</h3>
+                <ul>
+                    <li>Be respectful to all community members</li>
+                    <li>Keep discussions related to Persona 5 The Phantom X</li>
+                    <li>No spam or excessive caps lock</li>
+                    <li>Share strategies, ask questions, and help fellow players</li>
+                    <li>Messages are stored locally on your device</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>p5x.space</h3>
+                <p>Your complete guide to Persona 5 The Phantom X</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="classroom-answers.html">Classroom Answers</a></li>
+                    <li><a href="reset-times.html">Reset Times</a></li>
+                    <li><a href="romance-guide.html">Romance Guide</a></li>
+                    <li><a href="chat.html">Community Chat</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Created by</h4>
+                <p><strong>BrawlsMons</strong></p>
+                <p>Unofficial fan-made guide</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 p5x.space by BrawlsMons. Unofficial game guide for Persona 5 The Phantom X.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>
