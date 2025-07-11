@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Forum - Persona 5 The Phantom X Guide</title>
+    <meta name="description" content="Join the P5X community forum to discuss strategies, ask questions, and share tips about Persona 5 The Phantom X.">
+    <link rel="icon" type="image/x-icon" href="assets/icon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP8WHLYHMK"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP8WHLYHMK');
+    </script>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html" class="logo-text">p5x.space</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="answers.html" class="nav-link">Answers</a></li>
+                    <li><a href="guides.html" class="nav-link">Guides</a></li>
+                    <li><a href="reset-times.html" class="nav-link">Daily/Weekly Reset</a></li>
+                    <li><a href="characters.html" class="nav-link">Characters</a></li>
+                    <li><a href="forum.html" class="nav-link">Forum</a></li>
+                    <li><a href="chat.html" class="nav-link">Chat</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h1>Community Forum</h1>
+            <p>Discuss strategies, share tips, and connect with fellow Phantom Thieves</p>
+        </div>
+
+        <!-- User Setup Section -->
+        <div class="user-setup" id="userSetup" style="display: none;">
+            <div class="card">
+                <h2>Welcome to the Forum!</h2>
+                <p>Please enter your username to start participating:</p>
+                <div class="input-group">
+                    <input type="text" id="usernameInput" placeholder="Enter your username" maxlength="20">
+                    <button id="setUsernameBtn" class="btn-primary">Join Forum</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forum Controls -->
+        <div class="forum-controls" id="forumControls" style="display: none;">
+            <div class="user-info">
+                <span>Welcome, <strong id="currentUsername"></strong>!</span>
+                <button id="changeUsernameBtn" class="btn-secondary">Change Username</button>
+            </div>
+            <button id="newTopicBtn" class="btn-primary">New Topic</button>
+        </div>
+
+        <!-- New Topic Form -->
+        <div class="new-topic-form" id="newTopicForm" style="display: none;">
+            <div class="card">
+                <h2>Create New Topic</h2>
+                <div class="input-group">
+                    <input type="text" id="topicTitle" placeholder="Topic title" maxlength="100">
+                </div>
+                <div class="input-group">
+                    <select id="topicCategory">
+                        <option value="general">General Discussion</option>
+                        <option value="strategies">Strategies & Tips</option>
+                        <option value="builds">Character Builds</option>
+                        <option value="palace">Palace & Dungeons</option>
+                        <option value="romance">Romance & Relationships</option>
+                        <option value="questions">Questions & Help</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <textarea id="topicContent" placeholder="Share your thoughts..." rows="4"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button id="createTopicBtn" class="btn-primary">Create Topic</button>
+                    <button id="cancelTopicBtn" class="btn-secondary">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forum Topics -->
+        <div class="forum-topics" id="forumTopics">
+            <div class="topic-filters">
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="general">General Discussion</option>
+                    <option value="strategies">Strategies & Tips</option>
+                    <option value="builds">Character Builds</option>
+                    <option value="palace">Palace & Dungeons</option>
+                    <option value="romance">Romance & Relationships</option>
+                    <option value="questions">Questions & Help</option>
+                </select>
+                <input type="text" id="topicSearch" placeholder="Search topics..." class="search-input">
+            </div>
+            
+            <div class="topics-list" id="topicsList">
+                <!-- Topics will be dynamically loaded here -->
+            </div>
+        </div>
+
+        <!-- Topic View Modal -->
+        <div class="topic-modal" id="topicModal" style="display: none;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modalTopicTitle"></h2>
+                    <button class="close-modal" id="closeModal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="topic-content">
+                        <div class="topic-meta">
+                            <span class="topic-author" id="modalTopicAuthor"></span>
+                            <span class="topic-date" id="modalTopicDate"></span>
+                            <span class="topic-category" id="modalTopicCategory"></span>
+                        </div>
+                        <div class="topic-text" id="modalTopicContent"></div>
+                    </div>
+                    
+                    <div class="replies-section">
+                        <h3>Replies</h3>
+                        <div class="replies-list" id="repliesList">
+                            <!-- Replies will be loaded here -->
+                        </div>
+                        
+                        <div class="reply-form" id="replyForm">
+                            <textarea id="replyContent" placeholder="Write your reply..." rows="3"></textarea>
+                            <button id="submitReply" class="btn-primary">Post Reply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>p5x.space</h3>
+                <p>Your complete guide to Persona 5 The Phantom X</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="classroom-answers.html">Classroom Answers</a></li>
+                    <li><a href="reset-times.html">Reset Times</a></li>
+                    <li><a href="romance-guide.html">Romance Guide</a></li>
+                    <li><a href="forum.html">Community Forum</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Created by</h4>
+                <p><strong>BrawlsMons</strong></p>
+                <p>Unofficial fan-made guide</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 p5x.space by BrawlsMons. Unofficial game guide for Persona 5 The Phantom X.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="forum.js"></script>
+</body>
+</html>
